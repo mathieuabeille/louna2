@@ -1,16 +1,14 @@
-.btn-medium {
-  color: $light-gray;
-  border: 1px solid $light-gray;
-  padding: 10px 30px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  a{
-    color: $light-gray;
-  }
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.3s ease;
 }
-.btn-medium:hover {
+.btn-treehouse:hover {
   opacity: 1;
+  background: #3ac162;
   text-decoration: none;
-  color: $light-gray;
+  color: white;
 }
