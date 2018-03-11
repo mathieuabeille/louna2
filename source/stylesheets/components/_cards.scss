@@ -1,0 +1,152 @@
+// .card {
+//   height: 175px;
+//   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+//   background-size: cover !important;
+//   background-position: center;
+//   color: white;
+//   position: relative;
+// }
+// .card-user {
+//   position: absolute;
+//   right: 10px;
+//   top: 10px;
+//   width: 40px;
+//   border-radius: 50%;
+// }
+// .card-category {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-size: 15px;
+//   text-transform: uppercase;
+// }
+// .card-description {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 10px;
+// }
+// .card-description h2 {
+//   font-size: 24px;
+// }
+// .card-description p {
+//   font-size: 14px;
+//   opacity: 0.7;
+//   font-weight: lighter;
+// }
+// .card-link {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   width: 100%;
+//   z-index: 2;
+//   background: black;
+//   opacity: 0;
+// }
+// .card-link:hover {
+//   opacity: 0.1;
+// }
+
+
+@mixin breakpoint($point) {
+    @if $point == xxs {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+    @else if $point == xs {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $point == sm {
+        @media (min-width: 768px) and (max-width : 991px) {
+            @content;
+        }
+    }
+    @else if $point == md {
+        @media (min-width: 768px) and (max-width : 1199px) {
+            @content;
+        }
+    }
+    @else if $point == md-d {
+        @media (min-width: 1200px) and (max-width : 1299px) {
+            @content;
+        }
+    } //md-d is of Medium Desktop
+    @else if $point == lg {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md,md-d, lg";
+    }
+}
+
+#wrap {
+    width: 100%;
+    min-height: 100%;
+    height: auto!important;
+    position: relative;
+    padding: 55px 0;
+}
+
+.review-title {
+    margin-bottom: 30px;
+}
+
+.review-card {
+    &--option-1 {
+        border: 0px solid #D8D8D8;
+        padding: 25px;
+    }
+    .review-card-img {
+        border: 1px solid #eee;
+        width: 100px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin: 0 auto 15px;
+    }
+    .review-author {
+        .ra-author {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .ra-rating-star {
+            margin: 0 0 15px;
+            padding: 0;
+            list-style-type: none;
+            li {
+                display: inline-block;
+                margin: 0 -2px;
+            }
+        }
+    }
+    .review-content {}
+}
+
+#testiCarousel {
+    .carousel-control {
+        background: none;
+        width: auto;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        bottom: auto;
+        text-shadow: 0 0 0;
+        color: #000;
+        font-size: inherit;
+        &.left {
+            left: -75px;
+        }
+        &.right {
+            right: -75px
+        }
+        i {
+            font-size: 65px;
+        }
+    }
+}
